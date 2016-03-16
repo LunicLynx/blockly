@@ -1,0 +1,3 @@
+interface IBlocklyMask {
+    Root : IBlocklyMaskItem;
+}
