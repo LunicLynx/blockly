@@ -50,7 +50,7 @@ Blockly.Blocks['new_instance'] = {
             thisarg.setOutput(true, e);
         });
         this.appendDummyInput()
-            .appendField('new', undefined)
+            .appendField('new')
             .appendField(fieldType, 'TYPE');
 
         this.setOutput(true, fieldType.getValue());
@@ -68,7 +68,7 @@ Blockly.Blocks['field_get'] = {
         var thisarg = this;
 
         this.appendValueInput('INSTANCE')
-            .appendField('get', undefined)
+            .appendField('get')
             .setCheck('Object');
 
         this.fieldFieldref_ = new Blockly.FieldFieldref(function (e) {
@@ -135,7 +135,7 @@ Blockly.Blocks['field_set'] = {
         var thisarg = this;
 
         this.appendValueInput('INSTANCE')
-            .appendField('set', undefined)
+            .appendField('set')
             .setCheck('Object');
 
         this.fieldFieldref_ = new Blockly.FieldFieldref(function (e) {
@@ -146,7 +146,7 @@ Blockly.Blocks['field_set'] = {
             thisarg.input_.setCheck(field.type);
         });
         this.appendDummyInput()
-            .appendField(".", undefined)
+            .appendField(".")
             .appendField(this.fieldFieldref_, 'FIELD');
 
         this.input_ = this.appendValueInput('VALUE');

@@ -102,6 +102,7 @@ Blockly.Types.getSelfAndBase = function (typeName) {
         // anyway.
         return [typeName]; 
     var type = Blockly.Types.getType(typeName);
+    if (!type && typeName) return [typeName];
     if (!type) return [];
     if (type.base)
         return Blockly.Types.getSelfAndBase(type.base).concat([typeName]);
